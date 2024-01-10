@@ -12,11 +12,12 @@ public class MovieManager {
         this.limit = limit;
     }
 
-    public void addMovie(String movie) {
+    public void addMoves(String movie) {
         String[] tmp = new String[movies.length + 1];
         for (int i = 0; i < movies.length; i++) {
             tmp[i] = movies[i];
         }
+
         tmp[tmp.length - 1] = movie;
         this.movies = tmp;
     }
@@ -30,13 +31,13 @@ public class MovieManager {
         if (movies.length < limit) {
             resultLength = movies.length;
         } else {
-
             resultLength = limit;
         }
-            String[] answer = new String[resultLength];
-            for (int i = 0; i < answer.length; i++) {
-                answer[i] = movies[movies.length - 1 - i];
-            }
-            return answer;
+
+        String[] result = new String[resultLength];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = movies[movies.length - 1 - i];
         }
+        return result;
     }
+}
