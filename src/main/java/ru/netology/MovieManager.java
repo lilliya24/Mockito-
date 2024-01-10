@@ -29,13 +29,14 @@ public class MovieManager {
         int resultLength;
         if (movies.length < limit) {
             resultLength = movies.length;
-        } else
+        } else {
 
             resultLength = limit;
-        String[] answer = new String[resultLength];
-        for (int i = 0; i < answer.length; i++) {
-            answer[i] = movies[movies.length - 1 - i];
         }
-        return answer;
+            String[] answer = new String[resultLength];
+            for (int i = 0; i < answer.length; i++) {
+                answer[i] = movies[movies.length - 1 - i];
+            }
+            return answer;
+        }
     }
-}
